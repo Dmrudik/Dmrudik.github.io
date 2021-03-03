@@ -1,0 +1,33 @@
+@mixin before_circle {
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -25%;
+        left: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        background: $main-color;
+    }
+}
+@mixin hover_effect {
+    &:hover {
+        transform: scale(1.05);
+        filter: drop-shadow(5px 5px 5px rgb(138, 138, 255));
+    }
+}
+
+@mixin hover_effect_portfolio {
+    &:hover {
+        transform: scale(1.05);
+        filter: drop-shadow(5px 5px 5px rgb(138, 138, 255));
+        .portfolio__item-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    }
+}
+
